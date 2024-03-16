@@ -1,0 +1,16 @@
+{
+	"name": "emp1_table",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_DB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"table": "emp1_csv"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

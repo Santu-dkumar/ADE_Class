@@ -1,0 +1,9 @@
+{
+	"name": "SantuD-ADF",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "32f62bff-c687-403e-b365-a50b8c5b91e2",
+		"tenantId": "e8fb18e1-ca52-4053-bfea-ef3395332f4c"
+	}
+}

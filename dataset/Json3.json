@@ -1,0 +1,143 @@
+{
+	"name": "Json3",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"FileName": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().FileName",
+					"type": "Expression"
+				},
+				"container": "webactivityblobs"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"status": {
+					"type": "string"
+				},
+				"data": {
+					"type": "array",
+					"items": {
+						"type": "object",
+						"properties": {
+							"id": {
+								"type": "integer"
+							},
+							"employee_name": {
+								"type": "string"
+							},
+							"employee_salary": {
+								"type": "integer"
+							},
+							"employee_age": {
+								"type": "integer"
+							},
+							"profile_image": {
+								"type": "string"
+							}
+						}
+					}
+				},
+				"message": {
+					"type": "string"
+				},
+				"ADFWebActivityResponseHeaders": {
+					"type": "object",
+					"properties": {
+						"X-RateLimit-Limit": {
+							"type": "string"
+						},
+						"X-RateLimit-Remaining": {
+							"type": "string"
+						},
+						"Cache-Control": {
+							"type": "string"
+						},
+						"Date": {
+							"type": "string"
+						},
+						"Server": {
+							"type": "string"
+						},
+						"Vary": {
+							"type": "string"
+						},
+						"X-Endurance-Cache-Level": {
+							"type": "string"
+						},
+						"X-nginx-cache": {
+							"type": "string"
+						},
+						"X-Server-Cache": {
+							"type": "string"
+						},
+						"X-Proxy-Cache": {
+							"type": "string"
+						},
+						"Transfer-Encoding": {
+							"type": "string"
+						},
+						"Content-Type": {
+							"type": "string"
+						},
+						"Expires": {
+							"type": "string"
+						}
+					}
+				},
+				"effectiveIntegrationRuntime": {
+					"type": "string"
+				},
+				"executionDuration": {
+					"type": "integer"
+				},
+				"durationInQueue": {
+					"type": "object",
+					"properties": {
+						"integrationRuntimeQueue": {
+							"type": "integer"
+						}
+					}
+				},
+				"billingReference": {
+					"type": "object",
+					"properties": {
+						"activityType": {
+							"type": "string"
+						},
+						"billableDuration": {
+							"type": "array",
+							"items": {
+								"type": "object",
+								"properties": {
+									"meterType": {
+										"type": "string"
+									},
+									"duration": {
+										"type": "number"
+									},
+									"unit": {
+										"type": "string"
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

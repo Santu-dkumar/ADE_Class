@@ -1,0 +1,23 @@
+{
+	"name": "RestAPI_WebActivity",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_RestAPI",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"QueryParameters": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "@dataset().QueryParameters",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	}
+}

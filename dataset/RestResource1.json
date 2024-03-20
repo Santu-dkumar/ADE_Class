@@ -1,0 +1,23 @@
+{
+	"name": "RestResource1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_RestAPI",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"QueryParameter": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": {
+				"value": "@dataset().QueryParameter",
+				"type": "Expression"
+			}
+		},
+		"schema": []
+	}
+}

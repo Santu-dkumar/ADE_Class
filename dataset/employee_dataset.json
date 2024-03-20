@@ -1,0 +1,40 @@
+{
+	"name": "employee_dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_DB",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "id",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Ename",
+				"type": "varchar"
+			},
+			{
+				"name": "Sal",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Age",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Image",
+				"type": "varbinary"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "employees"
+		}
+	}
+}
